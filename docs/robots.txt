@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fletcherholt.github.io/decktube/sitemap.xml
