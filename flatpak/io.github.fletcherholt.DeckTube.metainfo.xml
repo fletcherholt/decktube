@@ -27,6 +27,11 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.0.3" date="2026-06-25" type="stable">
+      <description>
+        <p>Rename the sidebar entry to "DeckTube Settings"</p>
+      </description>
+    </release>
     <release version="1.0.2" date="2026-06-25" type="stable">
       <description>
         <p>Fix the DeckTube sidebar entry not showing its icon</p>

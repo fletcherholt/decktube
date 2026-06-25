@@ -138,7 +138,7 @@
             "description": "Remove features you don't want. These are DeckTube removals, not YouTube settings."
         },
         "sidebar": {
-            "title": "DeckTube"
+            "title": "DeckTube Settings"
         },
         "quality": {
             "title": "Video Quality",
