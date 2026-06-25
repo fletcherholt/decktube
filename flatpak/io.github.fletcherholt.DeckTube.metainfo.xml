@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<component type="desktop-application">
+  <id>io.github.fletcherholt.DeckTube</id>
+  <name>DeckTube</name>
+  <summary>YouTube for TV, tuned for the Steam Deck</summary>
+  <developer id="io.github.fletcherholt">
+    <name>Fletcher Holt</name>
+  </developer>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <update_contact>fletcherholt649@gmail.com</update_contact>
+  <description>
+    <p>DeckTube is an open source wrapper of YouTube Leanback (the console and Smart TV version of YouTube), tuned for the Steam Deck, with a built-in adblocker, SponsorBlock, full controller navigation, colour themes and a boot animation. It is the best way to experience YouTube on your handheld or media center. DeckTube is a fork of VacuumTube by shy.</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Watching a video</caption>
+      <image type="source">https://raw.githubusercontent.com/fletcherholt/decktube/refs/heads/main/flatpak/screenshots/video.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Searching</caption>
+      <image type="source">https://raw.githubusercontent.com/fletcherholt/decktube/refs/heads/main/flatpak/screenshots/search.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Settings</caption>
+      <image type="source">https://raw.githubusercontent.com/fletcherholt/decktube/refs/heads/main/flatpak/screenshots/settings.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="1.0.0" date="2026-06-25" type="stable">
+      <description>
+        <p>First release</p>
+        <ul>
+          <li>YouTube TV interface with full controller navigation, tuned for the Steam Deck</li>
+          <li>Ad blocking, SponsorBlock with selectable categories, and DeArrow</li>
+          <li>DeckTube sidebar entry opening a Clean Up panel: hide Shorts, remove the Ask (Gemini) button, end screens, info cards, autoplay, comments, and the "are you still watching" prompt</li>
+          <li>Playback speed control, preferred / maximum quality lock, and a sleep timer</li>
+          <li>Keep awake while a video is playing</li>
+          <li>Bundled colour themes (Catppuccin Mocha, OLED Black, Dracula, Nord, Gruvbox)</li>
+          <li>YouTube logo boot animation on launch</li>
+          <li>Steam Deck first-run defaults and GPU flags for smooth playback and animations</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  <url type="homepage">https://github.com/fletcherholt/decktube</url>
+  <url type="bugtracker">https://github.com/fletcherholt/decktube/issues</url>
+  <url type="vcs-browser">https://github.com/fletcherholt/decktube</url>
+  <url type="contribute">https://github.com/fletcherholt/decktube</url>
+  <requires>
+    <internet>always</internet>
+  </requires>
+  <recommends>
+    <control>gamepad</control>
+    <control>tv-remote</control>
+  </recommends>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>tablet</control>
+    <control>touch</control>
+  </supports>
+  <content_rating type="oars-1.1"/>
+  <launchable type="desktop-id">io.github.fletcherholt.DeckTube.desktop</launchable>
+  <keywords>
+    <keyword>youtube</keyword>
+    <keyword>yt</keyword>
+    <keyword>leanback</keyword>
+  </keywords>
+</component>

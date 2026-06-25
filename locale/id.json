@@ -1,0 +1,161 @@
+{
+    "general": {
+        "video_copied": "Tautan video disalin ke papan klip",
+        "dislikes": "Tidak Suka",
+        "steam_controller_notice": "Pengontrol eksternal tidak terdeteksi? Coba plugin steamdeck-input-disabler dari Decky."
+    },
+    "settings": {
+        "generic": {
+            "title": "Pengaturan",
+            "description": "Buka menu pengaturan DeckTube. Akses menu ini dengan menekan Ctrl+O pada papan ketik atau tombol R3 pada pengontrol konsol.",
+            "button_label": "Buka Pengaturan DeckTube",
+            "hint": "Gunakan tombol panah untuk menjelajah"
+        },
+        "adblock": {
+            "title": "Blokir Iklan",
+            "description": "Blokir iklan beranda dan video, tanpa perlu khawatir terdeteksi YouTube"
+        },
+        "sponsorblock": {
+            "title": "SponsorBlock",
+            "description": "Lewati segmen sponsor pada video YouTube berdasarkan basis data publik. Saat ini hanya mendukung fitur lewati sponsor."
+        },
+        "dearrow": {
+            "title": "DeArrow",
+            "description": "Mengganti judul dan gambar pratinjau video yang lebih akurat dan tidak sensasional dari basis data publik yang dihimpun bersama. Proses pengambilan informasi akan memperlambat pemuatan aplikasi DeckTube."
+        },
+        "dislikes": {
+            "title": "Kembalikan 'Tidak Suka'",
+            "description": "Gunakan API Return YouTube Dislike (returnyoutubedislike.com) untuk mengembalikan fitur info jumlah 'Tidak Suka' pada video YouTube. Proses pengambilan info ini akan memperlambat pemuatan video."
+        },
+        "remove_super_resolution": {
+            "title": "Hapus Resolusi Super",
+            "description": "Hapus pilihan kualitas \"Resolusi super\" (pembesaran AI) dari video beresolusi rendah"
+        },
+        "hide_shorts": {
+            "title": "Sembunyikan Shorts",
+            "description": "Sembunyikan Shorts YouTube dari halaman utama"
+        },
+        "hardware_decoding": {
+            "title": "Optimasi Grafis",
+            "description": "Gunakan kartu grafis (GPU) untuk mengurai pemutaran video jika sanggup. Mematikan opsi ini mungkin dapat menyelesaikan sebagian masalah pemutaran, namun dapat menghambat video jika prosesor tidak memadai. Luncurkan ulang setelah mengubah."
+        },
+        "low_memory_mode": {
+            "title": "Optimasi Memori",
+            "description": "Lakukan optimasi untuk perangkat bermemori rendah dengan mengurangi beberapa efek visual. Luncurkan ulang setelah mengubah."
+        },
+        "fullscreen": {
+            "title": "Mode Layar Penuh",
+            "description": "Memastikan DeckTube selalu masuk dalam mode layar penuh setelah diluncurkan."
+        },
+        "keep_on_top": {
+            "title": "Tetap di Atas",
+            "description": "Memastikan jendela DeckTube selalu berada di atas jendela aplikasi lain."
+        },
+        "userstyles": {
+            "title": "Kustomisasi CSS (Userstyles)",
+            "description": "Letakkan file .css kustom pada direktori userstyles untuk mengubah tampilan DeckTube. Perubahan akan dimuat otomatis.",
+            "warn_empty": "CSS tidak ditemukan",
+            "open_folder": "Buka Direktori Userstyles",
+            "enable": "Aktifkan Userstyles",
+            "failed_to_load": "Gagal memuat CSS"
+        },
+        "controller_support": {
+            "title": "Dukungan Pengontrol",
+            "description": "Mengaktifkan dukungan untuk pengontrol konsol eksternal, termasuk kontrol navigasi halaman dan pemutaran video."
+        },
+        "themes": {
+            "title": "Theme",
+            "description": "Apply a colour theme to the interface. Themes only change colours, so they never affect navigation."
+        },
+        "splash": {
+            "title": "Boot Animation",
+            "description": "Play the YouTube logo animation when DeckTube launches"
+        },
+        "cleanup": {
+            "title": "Clean Up",
+            "description": "Remove features you don't want. These are DeckTube removals, not YouTube settings."
+        },
+        "sidebar": {
+            "title": "DeckTube"
+        },
+        "quality": {
+            "title": "Video Quality",
+            "description": "Force a preferred or maximum resolution. Useful for saving battery and data on the Deck."
+        },
+        "sleep_timer": {
+            "title": "Sleep Timer",
+            "description": "Pause playback after a set time, or at the end of the current video.",
+            "fired": "Sleep timer reached, playback paused"
+        },
+        "keep_awake": {
+            "title": "Keep Awake",
+            "description": "Stop the screen sleeping while a video is playing. Fixes the Steam Deck sleeping mid-video."
+        },
+        "remove_ask_gemini": {
+            "title": "Remove Ask (Gemini)",
+            "description": "Removes the Gemini-powered Ask button from the video bar."
+        },
+        "remove_end_screens": {
+            "title": "Remove End Screens",
+            "description": "Hides the grid of suggested videos that covers the end of a video."
+        },
+        "remove_info_cards": {
+            "title": "Remove Info Cards",
+            "description": "Hides the info cards and the 'i' teaser that pop up over videos."
+        },
+        "disable_autoplay": {
+            "title": "Disable Autoplay",
+            "description": "Stops the next video playing automatically when one ends."
+        },
+        "remove_comments": {
+            "title": "Remove Comments",
+            "description": "Hides the comments section on the watch page."
+        },
+        "dismiss_are_you_there": {
+            "title": "Skip 'Are You Still Watching'",
+            "description": "Automatically dismisses the inactivity prompt so playback never stops to ask."
+        },
+        "sponsorblock_sponsor": {
+            "title": "Skip Sponsors",
+            "description": "Skip paid sponsor segments."
+        },
+        "sponsorblock_selfpromo": {
+            "title": "Skip Self-Promotion",
+            "description": "Skip unpaid self or product promotion."
+        },
+        "sponsorblock_interaction": {
+            "title": "Skip Interaction Reminders",
+            "description": "Skip 'like and subscribe' reminders."
+        },
+        "sponsorblock_intro": {
+            "title": "Skip Intros",
+            "description": "Skip intros and intermission screens."
+        },
+        "sponsorblock_outro": {
+            "title": "Skip Outros",
+            "description": "Skip endcards and credits."
+        },
+        "sponsorblock_preview": {
+            "title": "Skip Previews",
+            "description": "Skip previews and recaps of the video's own content."
+        },
+        "sponsorblock_music_offtopic": {
+            "title": "Skip Non-Music",
+            "description": "In music videos, skip the non-music sections."
+        },
+        "sponsorblock_filler": {
+            "title": "Skip Filler",
+            "description": "Skip tangents and filler."
+        }
+    },
+    "sponsorblock": {
+        "sponsor_skipped": "Sponsor dilewati"
+    },
+    "donate": {
+        "setting": {
+            "title": "Mari Berdonasi",
+            "description": "Dukung pengembangan DeckTube dengan berdonasi ke shy.rocks/donate. Tekan tombol berikut untuk membuka situs donasi di peramban Anda.",
+            "button_label": "Beri Donasi"
+        }
+    }
+}

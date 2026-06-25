@@ -1,0 +1,128 @@
+{
+    "general": {
+        "video_copied": "Link videa kopiran u međuspremnik",
+        "dislikes": "Palac dole"
+    },
+    "settings": {
+        "adblock": {
+            "title": "Blokator Oglasa",
+            "description": "Besprekorno blokira video i fid oglase, nije podložan YouTube metodama protiv blokiranja"
+        },
+        "sponsorblock_full_unused": {
+            "title": "Sponzorski blokator",
+            "description": "Preskače segmente sponzora u YouTube video snimcima koristeći bazu podataka prikupljenu od strane korisnika. Takođe podržava preskakanje uvoda, završetaka i podsetnika za pretplatu"
+        },
+        "dearrow": {
+            "title": "DeArrow",
+            "description": "Zamenjuje naslove i sličice tačnijim, manje senzacionalističkim verzijama iz javne baze podataka koju su prikupili korisnici. Usporava učitavanje, jer mora da preuzme informacije sa servera"
+        },
+        "dislikes": {
+            "title": "Vratite donji palac",
+            "description": "Koristi YouTube API za vraćanje palca prema dole (returnyoutubedislike.com) za ponovno dodavanje oznake 'nesviđa mi se' na YouTube. Usporava učitavanje videa, jer mora da preuzme informacije sa servera"
+        },
+        "hardware_decoding": {
+            "title": "Hardversko Dekodiranje",
+            "description": "Koristi vašu grafičku karticu za dekodiranje videa kada je to moguće. Onemogućavanje ove opcije može rešiti probleme sa reprodukcijom, ali može izazvati kašnjenje u zavisnosti od vašeg procesora. Ponovo pokrenite sistem nakon prebacivanja."
+        },
+        "low_memory_mode": {
+            "title": "Režim za Nisku Memoriju",
+            "description": "Nalaže YouTube-u da omogući režim sa malo memorije, što može poboljšati reprodukciju na sporijim uređajima, ali na štetu nekih vizuelnih efekata. Ponovo pokrenite sistem nakon prebacivanja."
+        },
+        "fullscreen": {
+            "title": "Ceo Ekran",
+            "description": "Omogućava ceo ekran i čini da DeckTube uvek radi u režimu celog ekrana."
+        },
+        "keep_on_top": {
+            "title": "Ostani na vrhu",
+            "description": "Omogućava opciju „Ostani na vrhu“ i pokreće DeckTube sa prozorom pričvršćenim preko svakog drugog prozora."
+        },
+        "userstyles": {
+            "title": "Prilagođeni CSS (korisnički stilovi)",
+            "description": "Omogućava ubrizgavanje prilagođenih CSS stilova. Postavite svoje .css datoteke u mapu 'korisnički stilovi'."
+        },
+        "themes": {
+            "title": "Theme",
+            "description": "Apply a colour theme to the interface. Themes only change colours, so they never affect navigation."
+        },
+        "splash": {
+            "title": "Boot Animation",
+            "description": "Play the YouTube logo animation when DeckTube launches"
+        },
+        "cleanup": {
+            "title": "Clean Up",
+            "description": "Remove features you don't want. These are DeckTube removals, not YouTube settings."
+        },
+        "sidebar": {
+            "title": "DeckTube"
+        },
+        "quality": {
+            "title": "Video Quality",
+            "description": "Force a preferred or maximum resolution. Useful for saving battery and data on the Deck."
+        },
+        "sleep_timer": {
+            "title": "Sleep Timer",
+            "description": "Pause playback after a set time, or at the end of the current video.",
+            "fired": "Sleep timer reached, playback paused"
+        },
+        "keep_awake": {
+            "title": "Keep Awake",
+            "description": "Stop the screen sleeping while a video is playing. Fixes the Steam Deck sleeping mid-video."
+        },
+        "remove_ask_gemini": {
+            "title": "Remove Ask (Gemini)",
+            "description": "Removes the Gemini-powered Ask button from the video bar."
+        },
+        "remove_end_screens": {
+            "title": "Remove End Screens",
+            "description": "Hides the grid of suggested videos that covers the end of a video."
+        },
+        "remove_info_cards": {
+            "title": "Remove Info Cards",
+            "description": "Hides the info cards and the 'i' teaser that pop up over videos."
+        },
+        "disable_autoplay": {
+            "title": "Disable Autoplay",
+            "description": "Stops the next video playing automatically when one ends."
+        },
+        "remove_comments": {
+            "title": "Remove Comments",
+            "description": "Hides the comments section on the watch page."
+        },
+        "dismiss_are_you_there": {
+            "title": "Skip 'Are You Still Watching'",
+            "description": "Automatically dismisses the inactivity prompt so playback never stops to ask."
+        },
+        "sponsorblock_sponsor": {
+            "title": "Skip Sponsors",
+            "description": "Skip paid sponsor segments."
+        },
+        "sponsorblock_selfpromo": {
+            "title": "Skip Self-Promotion",
+            "description": "Skip unpaid self or product promotion."
+        },
+        "sponsorblock_interaction": {
+            "title": "Skip Interaction Reminders",
+            "description": "Skip 'like and subscribe' reminders."
+        },
+        "sponsorblock_intro": {
+            "title": "Skip Intros",
+            "description": "Skip intros and intermission screens."
+        },
+        "sponsorblock_outro": {
+            "title": "Skip Outros",
+            "description": "Skip endcards and credits."
+        },
+        "sponsorblock_preview": {
+            "title": "Skip Previews",
+            "description": "Skip previews and recaps of the video's own content."
+        },
+        "sponsorblock_music_offtopic": {
+            "title": "Skip Non-Music",
+            "description": "In music videos, skip the non-music sections."
+        },
+        "sponsorblock_filler": {
+            "title": "Skip Filler",
+            "description": "Skip tangents and filler."
+        }
+    }
+}

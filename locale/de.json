@@ -1,0 +1,128 @@
+{
+    "general": {
+        "video_copied": "Videolink in die Zwischenablage kopiert",
+        "dislikes": "Abneigungsknöpfe"
+    },
+    "settings": {
+        "adblock": {
+            "title": "Anzeigenblocker",
+            "description": "Blockiert nahtlos Video- und Feed-Werbung und unterliegt nicht den Methoden von YouTube zur Verhinderung von Blockern"
+        },
+        "sponsorblock_full_unused": {
+            "title": "SponsorBlock",
+            "description": "Überspringt Sponsorensegmente in YouTube-Videos mithilfe einer Crowdsourcing-Datenbank. Unterstützt auch das Überspringen von Intros, Outros und Aufforderungen zum Abonnieren. Nach dem Umschalten neu starten."
+        },
+        "dearrow": {
+            "title": "DeArrow",
+            "description": "Ersetzt Titel und Vorschaubilder durch genauere, weniger sensationslüsterne Versionen aus einer öffentlichen Crowdsourced-Datenbank. Verlangsamt das Laden, da es Informationen vom Server abrufen muss"
+        },
+        "dislikes": {
+            "title": "Abneigungen zurückgeben",
+            "description": "Verwendet die YouTube Abneigungen zurückgeben API (returnyoutubedislike.com), um Abneigungsknöpfe wieder zu YouTube hinzuzufügen. Verlangsamt das Laden von Videos, da Informationen vom Server abgerufen werden müssen"
+        },
+        "hardware_decoding": {
+            "title": "Hardware-Dekodierung",
+            "description": "Verwendet Ihren Grafikprozessor zur Dekodierung von Videos, wenn möglich. Die Deaktivierung dieser Funktion kann Wiedergabeprobleme beheben, kann aber je nach CPU zu Verzögerungen führen. Starten Sie nach dem Umschalten neu."
+        },
+        "low_memory_mode": {
+            "title": "Wenigspeichermodus",
+            "description": "Weist YouTube an, den Modus für geringen Speicherbedarf zu aktivieren, was die Leistung auf langsameren Geräten auf Kosten einiger visueller Effekte verbessern kann. Starten Sie nach dem Umschalten neu."
+        },
+        "fullscreen": {
+            "title": "Vollbildschirm",
+            "description": "Aktiviert den Vollbildmodus und lässt DeckTube immer im Vollbildmodus starten."
+        },
+        "keep_on_top": {
+            "title": "Oben halten",
+            "description": "Aktiviert „Oben halten“ und sorgt dafür, dass DeckTube so gestartet wird, dass das Fenster über allen anderen Fenstern angeheftet ist."
+        },
+        "userstyles": {
+            "title": "Benutzerdefinierte CSS (Benutzerstile)",
+            "description": "Ermöglicht das Einfügen von benutzerdefinierten CSS-Stilen. Legen Sie Ihre .css-Dateien im Ordner „Benutzerstile“ ab."
+        },
+        "themes": {
+            "title": "Theme",
+            "description": "Apply a colour theme to the interface. Themes only change colours, so they never affect navigation."
+        },
+        "splash": {
+            "title": "Boot Animation",
+            "description": "Play the YouTube logo animation when DeckTube launches"
+        },
+        "cleanup": {
+            "title": "Clean Up",
+            "description": "Remove features you don't want. These are DeckTube removals, not YouTube settings."
+        },
+        "sidebar": {
+            "title": "DeckTube"
+        },
+        "quality": {
+            "title": "Video Quality",
+            "description": "Force a preferred or maximum resolution. Useful for saving battery and data on the Deck."
+        },
+        "sleep_timer": {
+            "title": "Sleep Timer",
+            "description": "Pause playback after a set time, or at the end of the current video.",
+            "fired": "Sleep timer reached, playback paused"
+        },
+        "keep_awake": {
+            "title": "Keep Awake",
+            "description": "Stop the screen sleeping while a video is playing. Fixes the Steam Deck sleeping mid-video."
+        },
+        "remove_ask_gemini": {
+            "title": "Remove Ask (Gemini)",
+            "description": "Removes the Gemini-powered Ask button from the video bar."
+        },
+        "remove_end_screens": {
+            "title": "Remove End Screens",
+            "description": "Hides the grid of suggested videos that covers the end of a video."
+        },
+        "remove_info_cards": {
+            "title": "Remove Info Cards",
+            "description": "Hides the info cards and the 'i' teaser that pop up over videos."
+        },
+        "disable_autoplay": {
+            "title": "Disable Autoplay",
+            "description": "Stops the next video playing automatically when one ends."
+        },
+        "remove_comments": {
+            "title": "Remove Comments",
+            "description": "Hides the comments section on the watch page."
+        },
+        "dismiss_are_you_there": {
+            "title": "Skip 'Are You Still Watching'",
+            "description": "Automatically dismisses the inactivity prompt so playback never stops to ask."
+        },
+        "sponsorblock_sponsor": {
+            "title": "Skip Sponsors",
+            "description": "Skip paid sponsor segments."
+        },
+        "sponsorblock_selfpromo": {
+            "title": "Skip Self-Promotion",
+            "description": "Skip unpaid self or product promotion."
+        },
+        "sponsorblock_interaction": {
+            "title": "Skip Interaction Reminders",
+            "description": "Skip 'like and subscribe' reminders."
+        },
+        "sponsorblock_intro": {
+            "title": "Skip Intros",
+            "description": "Skip intros and intermission screens."
+        },
+        "sponsorblock_outro": {
+            "title": "Skip Outros",
+            "description": "Skip endcards and credits."
+        },
+        "sponsorblock_preview": {
+            "title": "Skip Previews",
+            "description": "Skip previews and recaps of the video's own content."
+        },
+        "sponsorblock_music_offtopic": {
+            "title": "Skip Non-Music",
+            "description": "In music videos, skip the non-music sections."
+        },
+        "sponsorblock_filler": {
+            "title": "Skip Filler",
+            "description": "Skip tangents and filler."
+        }
+    }
+}

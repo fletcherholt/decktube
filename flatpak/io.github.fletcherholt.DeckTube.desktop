@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=DeckTube
+Exec=startdecktube %U
+Terminal=false
+Type=Application
+Icon=io.github.fletcherholt.DeckTube
+StartupWMClass=DeckTube
+Categories=AudioVideo;
+Keywords=YouTube;YT;
+Comment=Watch and explore videos on YouTube

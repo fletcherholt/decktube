@@ -1,0 +1,223 @@
+{
+    "general": {
+        "video_copied": "Video link copied to clipboard",
+        "dislikes": "Dislikes",
+        "steam_controller_notice": "External controller isn't detected? Try the steamdeck-input-disabler plugin from Decky.",
+        "encryption_error": {
+            "title": "Something went wrong",
+            "text": "This video couldn't be decoded. Movies aren't supported in DeckTube due to encryption. If this happens on other videos, try logging in or switching accounts.",
+            "switch_accounts": "Switch Accounts",
+            "okay": "Okay"
+        }
+    },
+    "settings": {
+        "generic": {
+            "title": "Settings",
+            "description": "Opens the DeckTube settings overlay. You can access this overlay anywhere by pressing Ctrl+O on your keyboard, or R3 on your controller",
+            "button_label": "Open DeckTube Settings",
+            "hint": "Use arrow keys to navigate"
+        },
+        "adblock": {
+            "title": "Ad Block",
+            "description": "Seamlessly blocks video and feed ads, not subject to YouTube's methods of preventing blockers"
+        },
+        "sponsorblock": {
+            "title": "SponsorBlock",
+            "description": "Skips segments in YouTube videos using a crowdsourced database. Choose which categories to skip below"
+        },
+        "dearrow": {
+            "title": "DeArrow",
+            "description": "Replaces titles and thumbnails with more accurate, less sensationalized versions from a public crowdsourced database. Slows down loading, as it has to fetch info from the server"
+        },
+        "dislikes": {
+            "title": "Return Dislikes",
+            "description": "Uses community data from the Return YouTube Dislike API (returnyoutubedislike.com) to show rough dislike counts. Slows down video loading, as it has to fetch info from the server"
+        },
+        "remove_super_resolution": {
+            "title": "Remove Super Resolution",
+            "description": "Remove \"Super resolution\" (AI upscaled) qualities from low quality videos"
+        },
+        "hide_shorts": {
+            "title": "Hide Shorts",
+            "description": "Hides YouTube Shorts from the home feed, subscriptions and search"
+        },
+        "h264ify": {
+            "title": "Filter Video Codecs",
+            "description": "Codec filtering options. Relaunch after toggling any of the options.",
+            "enable_title": "Enable codec filter (h264ify)",
+            "enable_description": "Enables the codec filter. This can help with performance and battery life on slower devices, but may reduce the available resolutions.",
+            "disable_webm_title": "Disable WebM",
+            "disable_webm_description": "Block WebM container streams.",
+            "disable_vp8_title": "Disable VP8",
+            "disable_vp8_description": "Block VP8 streams.",
+            "disable_vp9_title": "Disable VP9",
+            "disable_vp9_description": "Block VP9 streams.",
+            "disable_av1_title": "Disable AV1",
+            "disable_av1_description": "Block AV1 streams."
+        },
+        "hardware_decoding": {
+            "title": "Hardware Decoding",
+            "description": "Uses your GPU to decode videos when possible. Disabling this may fix playback issues, but can cause lag depending on your CPU. Relaunch after toggling"
+        },
+        "wayland_hdr": {
+            "title": "Wayland HDR",
+            "description": "Enables HDR when using Wayland, but can cause desaturated colors on unsupported platforms. Relaunch after toggling"
+        },
+        "low_memory_mode": {
+            "title": "Low Memory Mode",
+            "description": "Tells YouTube to enable low memory mode, which may improve performance on slower devices at the cost of some visual effects. Relaunch after toggling"
+        },
+        "fullscreen": {
+            "title": "Fullscreen",
+            "description": "Enables fullscreen, and makes DeckTube always launch in fullscreen"
+        },
+        "no_window_decorations": {
+            "title": "No Window Decorations",
+            "description": "Disables window decorations, including the title bar and window border. Relaunch after toggling"
+        },
+        "keep_on_top": {
+            "title": "Keep on Top",
+            "description": "Enables Keep on Top, and makes DeckTube launch with the window pinned on top of every other window"
+        },
+        "pause_on_blur": {
+            "title": "Pause on Blur",
+            "description": "Pause current video when DeckTube loses focus (e.g. tabbing out or minimizing the window)"
+        },
+        "userstyles": {
+            "title": "Custom CSS (Userstyles)",
+            "description": "Place .css files in the userstyles folder to customize the interface. Changes are applied automatically",
+            "warn_empty": "No userstyles found",
+            "open_folder": "Open Userstyles folder",
+            "enable": "Enable Userstyles",
+            "failed_to_load": "Failed to load userstyles"
+        },
+        "touch_overlay": {
+            "title": "Touch Overlay",
+            "description": "Enables on-screen touch controls for easier navigation when touch input is detected"
+        },
+        "controller_support": {
+            "title": "Controller Support",
+            "description": "Enables support for game controllers, including navigation and video playback controls. Requires an external controller, such as an Xbox controller"
+        },
+        "mac_permissions": {
+            "title": "Permissions",
+            "description": "Manage macOS permissions used by DeckTube.",
+            "microphone_title": "Microphone",
+            "microphone_description": "Used only when you start YouTube voice search.",
+            "status_label": "Status",
+            "status_loading": "Checking microphone permission...",
+            "request_microphone": "Request Microphone Access",
+            "open_microphone_settings": "Open macOS Microphone Settings",
+            "reset_microphone": "Troubleshooting: Reset Permission Prompt",
+            "relaunch_app": "Relaunch DeckTube",
+            "restart_required": "Changes made in macOS Settings require relaunching DeckTube.",
+            "request_granted": "Microphone access is allowed. No permission prompt is needed.",
+            "request_not_determined": "macOS still has not shown a permission prompt. Use Reset Permission Prompt, then try again.",
+            "request_denied_help": "macOS will not show the permission prompt again while access is denied. Turn it on in macOS Settings, then relaunch DeckTube.",
+            "request_failed": "DeckTube could not request microphone access. Open macOS Settings and relaunch the app after changing access.",
+            "resetting_microphone": "Resetting the saved macOS microphone decision...",
+            "statuses": {
+                "not-determined": "Not Requested",
+                "granted": "Allowed",
+                "denied": "Denied",
+                "restricted": "Restricted",
+                "unknown": "Unknown",
+                "unsupported": "Unsupported"
+            }
+        },
+        "themes": {
+            "title": "Theme",
+            "description": "Apply a colour theme to the interface. Themes only change colours, so they never affect navigation."
+        },
+        "splash": {
+            "title": "Boot Animation",
+            "description": "Play the YouTube logo animation when DeckTube launches"
+        },
+        "cleanup": {
+            "title": "Clean Up",
+            "description": "Remove features you don't want. These are DeckTube removals, not YouTube settings."
+        },
+        "sidebar": {
+            "title": "DeckTube"
+        },
+        "quality": {
+            "title": "Video Quality",
+            "description": "Force a preferred or maximum resolution. Useful for saving battery and data on the Deck."
+        },
+        "sleep_timer": {
+            "title": "Sleep Timer",
+            "description": "Pause playback after a set time, or at the end of the current video.",
+            "fired": "Sleep timer reached, playback paused"
+        },
+        "keep_awake": {
+            "title": "Keep Awake",
+            "description": "Stop the screen sleeping while a video is playing. Fixes the Steam Deck sleeping mid-video."
+        },
+        "remove_ask_gemini": {
+            "title": "Remove Ask (Gemini)",
+            "description": "Removes the Gemini-powered Ask button from the video bar."
+        },
+        "remove_end_screens": {
+            "title": "Remove End Screens",
+            "description": "Hides the grid of suggested videos that covers the end of a video."
+        },
+        "remove_info_cards": {
+            "title": "Remove Info Cards",
+            "description": "Hides the info cards and the 'i' teaser that pop up over videos."
+        },
+        "disable_autoplay": {
+            "title": "Disable Autoplay",
+            "description": "Stops the next video playing automatically when one ends."
+        },
+        "remove_comments": {
+            "title": "Remove Comments",
+            "description": "Hides the comments section on the watch page."
+        },
+        "dismiss_are_you_there": {
+            "title": "Skip 'Are You Still Watching'",
+            "description": "Automatically dismisses the inactivity prompt so playback never stops to ask."
+        },
+        "sponsorblock_sponsor": {
+            "title": "Skip Sponsors",
+            "description": "Skip paid sponsor segments."
+        },
+        "sponsorblock_selfpromo": {
+            "title": "Skip Self-Promotion",
+            "description": "Skip unpaid self or product promotion."
+        },
+        "sponsorblock_interaction": {
+            "title": "Skip Interaction Reminders",
+            "description": "Skip 'like and subscribe' reminders."
+        },
+        "sponsorblock_intro": {
+            "title": "Skip Intros",
+            "description": "Skip intros and intermission screens."
+        },
+        "sponsorblock_outro": {
+            "title": "Skip Outros",
+            "description": "Skip endcards and credits."
+        },
+        "sponsorblock_preview": {
+            "title": "Skip Previews",
+            "description": "Skip previews and recaps of the video's own content."
+        },
+        "sponsorblock_music_offtopic": {
+            "title": "Skip Non-Music",
+            "description": "In music videos, skip the non-music sections."
+        },
+        "sponsorblock_filler": {
+            "title": "Skip Filler",
+            "description": "Skip tangents and filler."
+        }
+    },
+    "sponsorblock": {
+        "sponsor_skipped": "Sponsor skipped"
+    },
+    "donate": {
+        "setting": {
+            "title": "Donate",
+            "description": "DeckTube is a fork of VacuumTube by shy. Support the original developer by visiting shy.rocks/donate, or by pressing the button below to open the donation page in your browser",
+            "button_label": "Donate"
+        }
+    }
+}

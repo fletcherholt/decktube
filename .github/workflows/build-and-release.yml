@@ -1,0 +1,78 @@
+name: Build and release
+
+permissions:
+  contents: write
+  packages: write
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+            platform: windows
+            build_script: windows:build
+          - os: macos-latest
+            platform: mac
+            build_script: mac:build
+          - os: ubuntu-latest
+            platform: linux
+            build_script: linux:build
+    
+    runs-on: ${{ matrix.os }}
+    name: Build for ${{ matrix.platform }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+  
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '23'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build ${{ matrix.platform }} app
+        run: npm run ${{ matrix.build_script }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
+
+      - name: Upload Windows artifacts to release
+        if: matrix.platform == 'windows'
+        run: |
+          gh release upload ${{ github.event.release.tag_name }} dist/DeckTube-Setup.exe --clobber
+          gh release upload ${{ github.event.release.tag_name }} dist/DeckTube-Setup.exe.blockmap --clobber
+          gh release upload ${{ github.event.release.tag_name }} dist/DeckTube-x64-Portable.zip --clobber
+          gh release upload ${{ github.event.release.tag_name }} dist/DeckTube-arm64-Portable.zip --clobber
+          gh release upload ${{ github.event.release.tag_name }} dist/latest.yml --clobber
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Mac artifacts to release
+        if: matrix.platform == 'mac'
+        run: |
+          gh release upload ${{ github.event.release.tag_name }} dist/DeckTube-universal.dmg --clobber
+          gh release upload ${{ github.event.release.tag_name }} dist/latest-mac.yml --clobber
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Linux artifacts to release
+        if: matrix.platform == 'linux'
+        run: |
+          gh release upload ${{ github.event.release.tag_name }} dist/DeckTube-amd64.deb --clobber
+          gh release upload ${{ github.event.release.tag_name }} dist/DeckTube-arm64.deb --clobber
+          gh release upload ${{ github.event.release.tag_name }} dist/DeckTube-x86_64.AppImage --clobber
+          gh release upload ${{ github.event.release.tag_name }} dist/DeckTube-arm64.AppImage --clobber
+          gh release upload ${{ github.event.release.tag_name }} dist/DeckTube-x64.tar.gz --clobber
+          gh release upload ${{ github.event.release.tag_name }} dist/DeckTube-arm64.tar.gz --clobber
+          gh release upload ${{ github.event.release.tag_name }} dist/latest-linux.yml --clobber
+          gh release upload ${{ github.event.release.tag_name }} dist/latest-linux-arm64.yml --clobber
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#222225"/>
+      <stop offset="1" stop-color="#0a0a0c"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff3636"/>
+      <stop offset="1" stop-color="#d60000"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="46" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="round"><rect x="0" y="0" width="1024" height="1024" rx="230" ry="230"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+    <g filter="url(#glow)">
+      <rect x="205" y="302" width="614" height="430" rx="128" fill="url(#badge)"/>
+    </g>
+    <rect x="232" y="336" width="560" height="150" rx="75" fill="#ffffff" opacity="0.12"/>
+    <polygon points="455,397 455,637 665,517" fill="#ffffff"/>
+  </g>
+</svg>

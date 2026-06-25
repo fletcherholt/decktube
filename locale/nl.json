@@ -1,0 +1,128 @@
+{
+    "general": {
+        "video_copied": "Videolink naar klembord gekopieerd",
+        "dislikes": "Afkeerknoppen"
+    },
+    "settings": {
+        "adblock": {
+            "title": "Ad-blokker",
+            "description": "Blokkeert naadloos video- en feed-advertenties en is niet onderhevig aan de blokkeermethoden van YouTube"
+        },
+        "sponsorblock_full_unused": {
+            "title": "Sponsorblok",
+            "description": "Slaat sponsorsegmenten in YouTube-video's over met behulp van een crowdsourced database. Ondersteunt ook het overslaan van intro's, outro's en herinneringen om je te abonneren"
+        },
+        "dearrow": {
+            "title": "DeArrow",
+            "description": "Vervangt titels en miniaturen door nauwkeurigere, minder sensationele versies uit een openbare, crowdsourcedatabase. Vertraagt het laden, omdat het info moet ophalen van de server"
+        },
+        "dislikes": {
+            "title": "Afkeren teruggeven",
+            "description": "Gebruikt de Return YouTube Dislike API (returnyoutubedislike.com) om afkeerknoppen opnieuw toe te voegen aan YouTube. Vertraagt het laden van video's, omdat het informatie van de server moet ophalen"
+        },
+        "hardware_decoding": {
+            "title": "Hardwaredecodering",
+            "description": "Gebruikt waar mogelijk uw GPU om video's te decoderen. Als u dit uitschakelt, kunnen afspeelproblemen worden opgelost, maar kan er vertraging optreden, afhankelijk van uw CPU. Herstart na het omschakelen."
+        },
+        "low_memory_mode": {
+            "title": "Laaggeheugenmodus",
+            "description": "Vertelt YouTube om de modus met laag geheugen in te schakelen, wat de prestaties op langzamere apparaten kan verbeteren ten koste van sommige visuele effecten. Herstart na het omschakelen."
+        },
+        "fullscreen": {
+            "title": "Vollescherm",
+            "description": "Schakelt volledig scherm in en zorgt ervoor dat DeckTube altijd opstart in volledig scherm."
+        },
+        "keep_on_top": {
+            "title": "Bovenaan houden",
+            "description": "Schakelt \"Bovenaan houden\" in en zorgt ervoor dat DeckTube wordt gestart met het venster boven elk ander venster vastgepind."
+        },
+        "userstyles": {
+            "title": "Aangepaste CSS (gebruikersstijlen)",
+            "description": "Maakt injectie van aangepaste CSS-stijlen mogelijk. Plaats je .css-bestanden in de gebruikersstijlen map."
+        },
+        "themes": {
+            "title": "Theme",
+            "description": "Apply a colour theme to the interface. Themes only change colours, so they never affect navigation."
+        },
+        "splash": {
+            "title": "Boot Animation",
+            "description": "Play the YouTube logo animation when DeckTube launches"
+        },
+        "cleanup": {
+            "title": "Clean Up",
+            "description": "Remove features you don't want. These are DeckTube removals, not YouTube settings."
+        },
+        "sidebar": {
+            "title": "DeckTube"
+        },
+        "quality": {
+            "title": "Video Quality",
+            "description": "Force a preferred or maximum resolution. Useful for saving battery and data on the Deck."
+        },
+        "sleep_timer": {
+            "title": "Sleep Timer",
+            "description": "Pause playback after a set time, or at the end of the current video.",
+            "fired": "Sleep timer reached, playback paused"
+        },
+        "keep_awake": {
+            "title": "Keep Awake",
+            "description": "Stop the screen sleeping while a video is playing. Fixes the Steam Deck sleeping mid-video."
+        },
+        "remove_ask_gemini": {
+            "title": "Remove Ask (Gemini)",
+            "description": "Removes the Gemini-powered Ask button from the video bar."
+        },
+        "remove_end_screens": {
+            "title": "Remove End Screens",
+            "description": "Hides the grid of suggested videos that covers the end of a video."
+        },
+        "remove_info_cards": {
+            "title": "Remove Info Cards",
+            "description": "Hides the info cards and the 'i' teaser that pop up over videos."
+        },
+        "disable_autoplay": {
+            "title": "Disable Autoplay",
+            "description": "Stops the next video playing automatically when one ends."
+        },
+        "remove_comments": {
+            "title": "Remove Comments",
+            "description": "Hides the comments section on the watch page."
+        },
+        "dismiss_are_you_there": {
+            "title": "Skip 'Are You Still Watching'",
+            "description": "Automatically dismisses the inactivity prompt so playback never stops to ask."
+        },
+        "sponsorblock_sponsor": {
+            "title": "Skip Sponsors",
+            "description": "Skip paid sponsor segments."
+        },
+        "sponsorblock_selfpromo": {
+            "title": "Skip Self-Promotion",
+            "description": "Skip unpaid self or product promotion."
+        },
+        "sponsorblock_interaction": {
+            "title": "Skip Interaction Reminders",
+            "description": "Skip 'like and subscribe' reminders."
+        },
+        "sponsorblock_intro": {
+            "title": "Skip Intros",
+            "description": "Skip intros and intermission screens."
+        },
+        "sponsorblock_outro": {
+            "title": "Skip Outros",
+            "description": "Skip endcards and credits."
+        },
+        "sponsorblock_preview": {
+            "title": "Skip Previews",
+            "description": "Skip previews and recaps of the video's own content."
+        },
+        "sponsorblock_music_offtopic": {
+            "title": "Skip Non-Music",
+            "description": "In music videos, skip the non-music sections."
+        },
+        "sponsorblock_filler": {
+            "title": "Skip Filler",
+            "description": "Skip tangents and filler."
+        }
+    }
+}
