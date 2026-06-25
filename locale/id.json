@@ -157,5 +157,20 @@
             "description": "Dukung pengembangan DeckTube dengan berdonasi ke shy.rocks/donate. Tekan tombol berikut untuk membuka situs donasi di peramban Anda.",
             "button_label": "Beri Donasi"
         }
+    },
+    "restart": {
+        "title": "Restart required",
+        "message": "This change needs a restart to take effect.",
+        "restart_now": "Restart now",
+        "later": "Later"
+    },
+    "update": {
+        "available_title": "Update available",
+        "available_message": "DeckTube {version} is available. Update now?",
+        "update_now": "Update now",
+        "later": "Later",
+        "ready_title": "Update ready",
+        "ready_message": "The update has been downloaded. Restart to install it?",
+        "restart_now": "Restart now"
     }
 }

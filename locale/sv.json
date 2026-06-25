@@ -124,5 +124,20 @@
             "title": "Skip Filler",
             "description": "Skip tangents and filler."
         }
+    },
+    "restart": {
+        "title": "Restart required",
+        "message": "This change needs a restart to take effect.",
+        "restart_now": "Restart now",
+        "later": "Later"
+    },
+    "update": {
+        "available_title": "Update available",
+        "available_message": "DeckTube {version} is available. Update now?",
+        "update_now": "Update now",
+        "later": "Later",
+        "ready_title": "Update ready",
+        "ready_message": "The update has been downloaded. Restart to install it?",
+        "restart_now": "Restart now"
     }
 }

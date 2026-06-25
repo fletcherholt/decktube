@@ -27,6 +27,16 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.0.4" date="2026-06-25" type="stable">
+      <description>
+        <p>Fullscreen, restart prompts and updates</p>
+        <ul>
+          <li>Launches fullscreen by default</li>
+          <li>Settings that need a restart now offer to restart immediately</li>
+          <li>Built-in updater checks for new releases and asks before updating</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.3" date="2026-06-25" type="stable">
       <description>
         <p>Rename the sidebar entry to "DeckTube Settings"</p>

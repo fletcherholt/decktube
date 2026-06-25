@@ -103,7 +103,26 @@ async function main() {
 
     await electron.app.whenReady()
 
-    autoUpdater.checkForUpdatesAndNotify()
+    autoUpdater.autoDownload = false;
+    autoUpdater.on('update-available', (info) => {
+        if (win && !win.isDestroyed()) win.webContents.send('dt-update-available', info.version)
+    })
+    autoUpdater.on('update-downloaded', (info) => {
+        if (win && !win.isDestroyed()) win.webContents.send('dt-update-downloaded', info.version)
+    })
+    autoUpdater.on('error', (err) => console.error('[updater]', err))
+
+    electron.ipcMain.handle('dt-download-update', () => autoUpdater.downloadUpdate())
+    electron.ipcMain.handle('dt-install-update', () => autoUpdater.quitAndInstall())
+
+    setTimeout(() => {
+        try {
+            autoUpdater.checkForUpdates()
+        } catch (err) {
+            console.error('[updater] check failed', err)
+        }
+    }, 8000)
+
     permissions.setup({ appId })
 
     electron.session.defaultSession.webRequest.onBeforeRequest((details, callback) => {

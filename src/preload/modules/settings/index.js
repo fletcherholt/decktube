@@ -247,6 +247,16 @@ function toggleSetting(configKey) {
     if (dynamicFunction[configKey]) {
         dynamicFunction[configKey](newValue)
     }
+
+    if (RESTART_KEYS.has(configKey)) {
+        showPrompt({
+            title: locale.restart.title,
+            message: locale.restart.message,
+            confirm: locale.restart.restart_now,
+            cancel: locale.restart.later,
+            onConfirm: () => ipcRenderer.invoke('relaunch-app')
+        })
+    }
 }
 
 async function handleButtonAction(action) {
@@ -386,7 +396,112 @@ const gamepadKeyMap = {
     1013: 'ArrowRight'
 }
 
+const RESTART_KEYS = new Set([
+    'h264ify',
+    'h264ify_disable_webm',
+    'h264ify_disable_vp8',
+    'h264ify_disable_vp9',
+    'h264ify_disable_av1',
+    'hardware_decoding',
+    'wayland_hdr',
+    'low_memory_mode',
+    'no_window_decorations'
+])
+
+let promptActive = false;
+let promptSelected = 'confirm';
+let promptOnConfirm = null;
+
+function createPromptDOM() {
+    return el('div', { id: 'vt-prompt-root', className: 'vt-prompt-hidden' }, [
+        el('div', { className: 'vt-prompt-backdrop' }),
+        el('div', { className: 'vt-prompt-box' }, [
+            el('div', { className: 'vt-prompt-title', id: 'vt-prompt-title' }),
+            el('div', { className: 'vt-prompt-message', id: 'vt-prompt-message' }),
+            el('div', { className: 'vt-prompt-buttons' }, [
+                el('div', { className: 'vt-prompt-btn', dataPromptBtn: 'confirm' }, [ el('span', { id: 'vt-prompt-confirm' }) ]),
+                el('div', { className: 'vt-prompt-btn', dataPromptBtn: 'cancel' }, [ el('span', { id: 'vt-prompt-cancel' }) ])
+            ])
+        ])
+    ]);
+}
+
+function updatePromptFocus() {
+    const root = document.getElementById('vt-prompt-root')
+    if (!root) return;
+    root.querySelectorAll('.vt-prompt-btn').forEach(b => {
+        b.classList.toggle('vt-prompt-btn-focused', b.dataset.promptBtn === promptSelected)
+    })
+}
+
+function showPrompt(opts) {
+    const root = document.getElementById('vt-prompt-root')
+    if (!root) return;
+
+    document.getElementById('vt-prompt-title').textContent = opts.title || '';
+    document.getElementById('vt-prompt-message').textContent = opts.message || '';
+    document.getElementById('vt-prompt-confirm').textContent = opts.confirm || 'OK';
+    document.getElementById('vt-prompt-cancel').textContent = opts.cancel || 'Cancel';
+
+    promptOnConfirm = opts.onConfirm || null;
+    promptSelected = 'confirm';
+    promptActive = true;
+    root.classList.remove('vt-prompt-hidden')
+    updatePromptFocus()
+}
+
+function hidePrompt() {
+    const root = document.getElementById('vt-prompt-root')
+    if (root) root.classList.add('vt-prompt-hidden')
+    promptActive = false;
+}
+
+function confirmPrompt() {
+    const cb = promptOnConfirm;
+    promptOnConfirm = null;
+    hidePrompt()
+    if (cb) cb()
+}
+
+function handlePromptKey(key) {
+    if (key === 'ArrowLeft') {
+        promptSelected = 'confirm';
+        updatePromptFocus()
+    } else if (key === 'ArrowRight') {
+        promptSelected = 'cancel';
+        updatePromptFocus()
+    } else if (key === 'Enter' || key === ' ') {
+        if (promptSelected === 'confirm') confirmPrompt(); else hidePrompt()
+    } else if (key === 'Escape' || key === 'Backspace') {
+        hidePrompt()
+    }
+}
+
 function setupEventListeners() {
+    window.addEventListener('keydown', (e) => {
+        if (!promptActive) return;
+        e.preventDefault()
+        e.stopPropagation()
+        e.stopImmediatePropagation()
+        handlePromptKey(e.key)
+    }, true)
+
+    window.addEventListener('keyup', (e) => {
+        if (!promptActive) return;
+        e.preventDefault()
+        e.stopPropagation()
+        e.stopImmediatePropagation()
+    }, true)
+
+    document.addEventListener('click', (e) => {
+        if (!promptActive) return;
+        const btn = e.target.closest('.vt-prompt-btn')
+        if (!btn) return;
+        e.stopPropagation()
+        promptSelected = btn.dataset.promptBtn;
+        if (promptSelected === 'confirm') confirmPrompt(); else hidePrompt()
+    }, true)
+
 
     document.addEventListener('keydown', (e) => {
         if (e.ctrlKey && e.key.toLowerCase() === 'o') {
@@ -463,6 +578,12 @@ function setupEventListeners() {
     }, true)
 
     controller.on('down', (e) => {
+        if (promptActive) {
+            let key = gamepadKeyMap[e.code]
+            if (key) handlePromptKey(key)
+            return;
+        }
+
         if ((Date.now() - overlayVisible) < 100) return;
 
         let key = gamepadKeyMap[e.code]
@@ -501,6 +622,7 @@ module.exports = async () => {
 
     const overlayElement = createOverlayDOM()
     document.body.appendChild(overlayElement)
+    document.body.appendChild(createPromptDOM())
 
     setupTouchScroll('.vt-tabs-viewport', '#vt-settings-tabs', '#vt-tabs-scrollbar-thumb')
     for (const panel of panelModules) {
@@ -528,6 +650,7 @@ module.exports = async () => {
 
     window.vtOpenSettingsOverlay = openSettingsOverlay;
     window.vtToggleSettingsOverlay = toggleSettingsOverlay;
+    window.vtShowPrompt = showPrompt;
 }
 
 module.exports.openSettingsOverlay = openSettingsOverlay;

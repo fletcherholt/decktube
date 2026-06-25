@@ -35,7 +35,7 @@ const defaults = {
     hardware_decoding: true,
     wayland_hdr: false,
     low_memory_mode: false,
-    fullscreen: false,
+    fullscreen: true,
     splash: true,
     theme: 'none',
     preferred_quality: 'auto',
@@ -83,6 +83,7 @@ function init(overrides = {}) {
         let migrated = false;
         if (parsed.dt_touch_reset !== true) {
             parsed.touch_overlay = false;
+            parsed.fullscreen = true;
             parsed.dt_touch_reset = true;
             migrated = true;
         }
