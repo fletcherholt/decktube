@@ -10,6 +10,8 @@ YouTube for the living room, tuned for the Steam Deck. The real console TV inter
 ![Built with Electron](https://img.shields.io/badge/Electron-1c1c1c?style=for-the-badge&logo=electron)
 ![Licence MIT](https://img.shields.io/badge/Licence-MIT-ff0000?style=for-the-badge&labelColor=1c1c1c)
 
+[![Support me on Ko-fi](https://img.shields.io/badge/Ko--fi-Support_me-ff0000?style=for-the-badge&logo=kofi&logoColor=white&labelColor=1c1c1c)](https://ko-fi.com/fletcherholt)
+
 </div>
 
 ## What it is
@@ -115,6 +117,10 @@ Releases are built automatically by GitHub Actions for all three platforms when 
 ## How it works
 
 DeckTube loads `youtube.com/tv` in an Electron window with a PlayStation class Cobalt user agent, which is what unlocks the TV interface. It deliberately reports an older Cobalt version to the page so YouTube serves clear, non DRM streams that Electron can play. A set of preload modules then run inside the interface to add the ad blocker, SponsorBlock, the themes, the settings overlay and the controller bindings. The boot splash is a separate window shown over the top until the interface is ready, then faded out for a clean hand off.
+
+## Support
+
+If DeckTube is useful to you, you can support its development on [Ko-fi](https://ko-fi.com/fletcherholt). It is entirely optional and always appreciated.
 
 ## Credits
 
