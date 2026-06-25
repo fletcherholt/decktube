@@ -27,6 +27,16 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.0.1" date="2026-06-25" type="stable">
+      <description>
+        <p>Polish</p>
+        <ul>
+          <li>Boot animation now uses the full-quality video and hands off cleanly with no flash of the interface</li>
+          <li>DeckTube sidebar entry moved to the bottom of the guide with a clear icon</li>
+          <li>Touch overlay off by default, and tapping no longer summons controls when it is off</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.0" date="2026-06-25" type="stable">
       <description>
         <p>First release</p>

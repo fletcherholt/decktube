@@ -54,7 +54,8 @@ const defaults = {
     userstyles: false,
     disabled_userstyles: [],
     touch_overlay: false,
-    controller_support: true
+    controller_support: true,
+    dt_touch_reset: true
 }
 
 function init(overrides = {}) {
@@ -79,9 +80,24 @@ function init(overrides = {}) {
             fs.writeFileSync(configFile, JSON.stringify(parsed, null, 4))
         }
 
+        let migrated = false;
+        if (parsed.dt_touch_reset !== true) {
+            parsed.touch_overlay = false;
+            parsed.dt_touch_reset = true;
+            migrated = true;
+        }
+
         config = {
             ...defaults,
             ...parsed
+        }
+
+        if (migrated) {
+            try {
+                fs.writeFileSync(configFile, JSON.stringify(config, null, 4))
+            } catch (err) {
+                console.error('[config] Failed to persist migration', err)
+            }
         }
 
         console.log('[config] Loaded config', config)

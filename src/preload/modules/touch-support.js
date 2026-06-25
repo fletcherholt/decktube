@@ -3,11 +3,13 @@ const configManager = require('../config')
 const config = configManager.get()
 
 module.exports = () => {
-    configOverrides.tectonicConfigOverrides.push({
-        featureSwitches: {
-            enableTouchSupport: true
-        }
-    })
+    if (config.touch_overlay) {
+        configOverrides.tectonicConfigOverrides.push({
+            featureSwitches: {
+                enableTouchSupport: true
+            }
+        })
+    }
 
     window.addEventListener('keydown', (e) => {
         if (e.code === 'Space') {

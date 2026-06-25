@@ -295,6 +295,7 @@ async function createWindow() {
             nodeIntegration: false,
             contextIsolation: false,
             sandbox: false,
+            backgroundThrottling: false,
             nodeIntegrationInSubFrames: true,
             preload: path.join(__dirname, 'preload/index.js')
         },
@@ -346,7 +347,7 @@ async function createWindow() {
 
         if (splashWin && !splashWin.isDestroyed()) {
             splashWin.webContents.executeJavaScript("document.body.classList.add('fade-out')").catch(() => {})
-            setTimeout(closeSplash, 500)
+            setTimeout(closeSplash, 600)
         }
     }
 
@@ -354,17 +355,17 @@ async function createWindow() {
         createSplash(fullscreen)
 
         const splashStart = Date.now()
-        const SPLASH_MIN_MS = 4000;
+        const SPLASH_MIN_MS = 4500;
         const SPLASH_CAP_MS = 12000;
 
-        let mainReady = false;
+        let leanbackReady = false;
+        let minElapsed = false;
         const tryReveal = () => {
-            if (!mainReady) return;
-            let wait = Math.max(0, SPLASH_MIN_MS - (Date.now() - splashStart))
-            setTimeout(revealMain, wait)
+            if (leanbackReady && minElapsed) revealMain()
         }
 
-        win.once('ready-to-show', () => { mainReady = true; tryReveal() })
+        setTimeout(() => { minElapsed = true; tryReveal() }, SPLASH_MIN_MS)
+        electron.ipcMain.once('leanback-ready', () => { leanbackReady = true; tryReveal() })
         setTimeout(revealMain, SPLASH_CAP_MS)
     } else {
         win.once('ready-to-show', revealMain)
@@ -431,6 +432,11 @@ function createSplash(fullscreen) {
     splashWin.once('ready-to-show', () => {
         splashWin.setFullScreen(fullscreen)
         splashWin.show()
+
+        if (win && !win.isDestroyed()) {
+            win.setFullScreen(fullscreen)
+            win.showInactive()
+        }
     })
 }
 
