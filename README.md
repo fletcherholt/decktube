@@ -12,7 +12,7 @@ YouTube for the living room, tuned for the Steam Deck. The real console TV inter
 
 [![Support me on Ko-fi](https://img.shields.io/badge/Ko--fi-Support_me-ff0000?style=for-the-badge&logo=kofi&logoColor=white&labelColor=1c1c1c)](https://ko-fi.com/fletcherholt)
 
-**[decktube website](https://fletcherholt.github.io/decktube/)** · **[download for Steam Deck](https://github.com/fletcherholt/decktube/releases/latest)**
+**[decktube website](https://fletcherholt.github.io/)** · **[download for Steam Deck](https://github.com/fletcherholt/decktube/releases/latest)**
 
 </div>
 
