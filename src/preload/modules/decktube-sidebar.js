@@ -1,9 +1,7 @@
 const jsonMod = require('../util/jsonModifiers')
 const localeProvider = require('../util/localeProvider')
 
-const badgeIcon = `data:image/svg+xml,${encodeURIComponent(
-    "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 34'><rect width='48' height='34' rx='9' fill='#ff0000'/><path d='M19 9 L19 25 L33 17 Z' fill='white'/></svg>"
-)}`
+const badgeIcon = 'https://raw.githubusercontent.com/fletcherholt/decktube/main/assets/icons/256x256.png'
 
 module.exports = async () => {
     await localeProvider.waitUntilAvailable()
@@ -22,7 +20,7 @@ module.exports = async () => {
                             formattedTitle: { runs: [ { text: label } ] },
                             accessibilityText: label,
                             icon: { iconType: 'SETTINGS' },
-                            thumbnail: { thumbnails: [ { url: badgeIcon, width: 48, height: 34 } ] },
+                            thumbnail: { thumbnails: [ { url: badgeIcon, width: 256, height: 256 } ] },
                             entryData: { guideEntryData: { guideEntryId: 'dt-sidebar-entry' } },
                             navigationEndpoint: {
                                 vtConfigOption: 'vt-button',

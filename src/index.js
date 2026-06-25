@@ -160,7 +160,7 @@ async function main() {
                 let imgMatch = header.match(imgPattern)
                 if (imgMatch) {
                     let existing = imgMatch[1]
-                    let additions = 'dearrow-thumb.ajay.app data:'
+                    let additions = 'dearrow-thumb.ajay.app raw.githubusercontent.com data:'
                     let updated = `img-src ${existing} ${additions}`
                     header = header.replace(imgPattern, updated)
                 }
